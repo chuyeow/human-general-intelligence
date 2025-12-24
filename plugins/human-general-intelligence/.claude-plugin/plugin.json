@@ -8,12 +8,5 @@
   },
   "homepage": "https://github.com/chuyeow/human-general-intelligence",
   "license": "MIT",
-  "keywords": ["workflow", "planning", "productivity", "git", "readwise"],
-  "components": {
-    "commands": 7,
-    "agents": 1,
-    "skills": 0,
-    "hooks": 0,
-    "mcp": 0
-  }
+  "keywords": ["workflow", "planning", "productivity", "git", "readwise"]
 }
