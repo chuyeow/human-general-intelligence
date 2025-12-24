@@ -1,0 +1,28 @@
+# Claude Code
+.claude/
+*.local.md
+*.local.json
+
+# Environment
+.env
+.env.local
+
+# Node
+node_modules/
+npm-debug.log
+package-lock.json
+
+# OS
+.DS_Store
+Thumbs.db
+.vscode/
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# Build
+dist/
+build/
