@@ -1,8 +1,48 @@
 # human-general-intelligence
 
-Personal workflow toolkit with commands for planning, version control, session management, and productivity tools. Includes specialized agent for processing Readwise highlights.
+Personal workflow toolkit marketplace for Claude Code, featuring commands for planning, version control, session management, and productivity tools.
 
-## Features
+## Available Plugins
+
+### human-general-intelligence (v0.1.0)
+
+Personal workflow toolkit with 7 commands and 1 agent for enhancing your Claude Code experience.
+
+**Features:**
+- 7 productivity commands (planning, git, code review, daily planning, token optimization)
+- 1 specialized agent (Readwise highlight ingestion)
+- Pre-configured permissions for safe operation
+- Optional Google Calendar integration
+
+See the [plugin README](plugins/human-general-intelligence/README.md) for detailed feature descriptions.
+
+## Installation
+
+### Via GitHub
+
+```bash
+claude plugin marketplace add chuyeow/human-general-intelligence
+claude plugin install human-general-intelligence@human-general-intelligence
+```
+
+### Via Local Path
+
+```bash
+claude plugin marketplace add /path/to/human-general-intelligence
+claude plugin install human-general-intelligence@human-general-intelligence
+```
+
+### Update Marketplace
+
+To get the latest plugin versions:
+
+```bash
+claude plugin marketplace update human-general-intelligence
+```
+
+## Quick Start
+
+After installation, you'll have access to:
 
 ### Commands (7)
 - **`/follow-plan`** - Follow the active plan from CLAUDE.md
@@ -16,136 +56,42 @@ Personal workflow toolkit with commands for planning, version control, session m
 ### Agent (1)
 - **`@readwise-highlight-ingester`** - Extract and organize highlights from Readwise Reader shared links
 
-## Installation
+## Marketplace Structure
 
-### Local Installation
+```
+human-general-intelligence/
+├── .claude-plugin/
+│   └── marketplace.json          # Marketplace catalog
+├── plugins/
+│   └── human-general-intelligence/
+│       ├── .claude-plugin/
+│       │   ├── plugin.json       # Plugin manifest
+│       │   └── settings.json     # Permission rules
+│       ├── commands/             # 7 workflow commands
+│       ├── agents/               # Specialized agents
+│       └── README.md             # Plugin documentation
+└── README.md                      # This file
+```
+
+## Migration from Standalone Plugin
+
+If you previously installed this as a standalone plugin, you'll need to reinstall using the marketplace format:
 
 ```bash
-cp -r ~/code/human-general-intelligence ~/.claude-plugin/
+# Uninstall old version
+claude plugin uninstall human-general-intelligence
+
+# Install from marketplace
+claude plugin marketplace add chuyeow/human-general-intelligence
+claude plugin install human-general-intelligence@human-general-intelligence
 ```
 
-Or use the Claude Code plugin installer:
-```bash
-claude plugin install ~/code/human-general-intelligence
-```
-
-## Quick Start
-
-### Commands
-
-All commands are available via `/` menu:
-
-```
-/follow-plan       # Review and follow active plans
-/git-commit        # Commit with better messages
-/git-summary       # Analyze repo state
-/handoff          # Prepare session handoff
-/multi-perspective-review  # Multi-agent code review
-/today            # Daily planning assistant
-/token-shortener  # Optimize token usage
-```
-
-### Agent
-
-Use the Readwise agent to ingest highlights:
-
-```
-@readwise-highlight-ingester
-```
-
-Then provide a Readwise Reader shared link.
-
-## Google Calendar Integration (Optional)
-
-The `/today` command works standalone, but can integrate with Google Calendar for calendar-aware daily planning.
-
-### Setup
-
-1. Install Google Calendar MCP server:
-   ```bash
-   claude mcp add
-   ```
-
-2. Search for "google-calendar" and follow prompts
-
-3. Run `/today` - it will now include calendar context
-
-### Without Calendar
-
-No worries! The command gracefully handles missing calendar:
-- Scans your todo list and notes instead
-- Provides excellent daily planning without calendar
-- Show warning if calendar MCP not available
-
-## Permissions
-
-The plugin includes permission rules for:
-- **Allow**: Essential tools (Read, Write, Edit, Bash, Web tools)
-- **Ask**: Dangerous operations (rm, sudo, ssh, docker, etc.)
-- **Deny**: Secret files (keys, certificates, SSH)
-
-Adjust in `/permissions` if needed for your workflow.
-
-## Components
-
-| Component | Count | Description |
-|-----------|-------|-------------|
-| Commands | 8 | Daily planning, version control, productivity |
-| Agents | 1 | Readwise highlight ingestion |
-| Skills | 0 | Commands are self-contained |
-| Hooks | 0 | No event-driven automation |
-| MCP | 0 | Optional Google Calendar integration |
-| Settings | ✓ | Pre-configured permissions |
+All commands and functionality remain the same - only the installation method has changed.
 
 ## Requirements
 
 - Claude Code 2.0+
-- (Optional) Google Calendar MCP for calendar integration
-
-## What's Included
-
-```
-human-general-intelligence/
-├── plugin.json                    # Plugin manifest
-├── README.md                      # This file
-├── .claude-plugin/
-│   └── settings.json             # Permission rules
-├── commands/                      # 7 workflow commands
-│   ├── follow-plan.md
-│   ├── git-commit.md
-│   ├── git-summary.md
-│   ├── handoff.md
-│   ├── multi-perspective-review.md
-│   ├── today.md
-│   └── token-shortener.md
-└── agents/                        # Specialized agents
-    └── readwise-highlight-ingester.md
-```
-
-## Usage Examples
-
-### Daily Planning
-```
-/today                    # Start daily planning
-/today 2025-12-25        # Plan for specific date
-```
-
-### Git Workflow
-```
-/git-summary             # Check repo status
-/git-commit              # Create commit
-```
-
-### Code Review
-```
-/multi-perspective-review    # Multi-angle code review
-```
-
-### Readwise Integration
-```
-@readwise-highlight-ingester
-https://readwise.io/reader/shared/01HQ...
-```
+- (Optional) Google Calendar MCP server for calendar integration in `/today` command
 
 ## License
 
@@ -153,4 +99,9 @@ MIT
 
 ## Author
 
-Chu Yeow
+Cheah Chu Yeow (chuyeow@gmail.com)
+
+## Links
+
+- [GitHub Repository](https://github.com/chuyeow/human-general-intelligence)
+- [Plugin Documentation](plugins/human-general-intelligence/README.md)

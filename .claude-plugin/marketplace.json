@@ -1,0 +1,22 @@
+{
+  "name": "human-general-intelligence",
+  "owner": {
+    "name": "Cheah Chu Yeow",
+    "email": "chuyeow@gmail.com"
+  },
+  "homepage": "https://github.com/chuyeow/human-general-intelligence",
+  "plugins": [
+    {
+      "name": "human-general-intelligence",
+      "description": "Stuff that I use to bridge the gaps before Artificial Super Intelligence arrives.",
+      "version": "0.1.0",
+      "source": "./plugins/human-general-intelligence",
+      "author": {
+        "name": "Cheah Chu Yeow",
+        "email": "chuyeow@gmail.com"
+      },
+      "license": "MIT",
+      "keywords": ["workflow", "planning", "productivity", "git", "readwise"]
+    }
+  ]
+}
