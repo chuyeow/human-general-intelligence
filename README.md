@@ -4,13 +4,14 @@ Personal workflow toolkit marketplace for Claude Code, featuring commands for pl
 
 ## Available Plugins
 
-### human-general-intelligence (v0.1.0)
+### human-general-intelligence (v0.2.0)
 
-Personal workflow toolkit with 7 commands and 1 agent for enhancing your Claude Code experience.
+Personal workflow toolkit with 7 commands, 1 agent, and 1 skill for enhancing your Claude Code experience.
 
 **Features:**
 - 7 productivity commands (planning, git, code review, daily planning, token optimization)
 - 1 specialized agent (Readwise highlight ingestion)
+- 1 skill (TDD methodology guide for test-first development)
 - Pre-configured permissions for safe operation
 - Optional Google Calendar integration
 
@@ -56,6 +57,9 @@ After installation, you'll have access to:
 ### Agent (1)
 - **`@readwise-highlight-ingester`** - Extract and organize highlights from Readwise Reader shared links
 
+### Skill (1)
+- **`tdd`** - Test-Driven Development methodology for writing tests first and following red-green-refactor cycle
+
 ## Marketplace Structure
 
 ```
@@ -69,6 +73,9 @@ human-general-intelligence/
 │       │   └── settings.json     # Permission rules
 │       ├── commands/             # 7 workflow commands
 │       ├── agents/               # Specialized agents
+│       ├── skills/               # TDD methodology skill
+│       │   └── tdd/
+│       │       └── SKILL.md
 │       └── README.md             # Plugin documentation
 └── README.md                      # This file
 ```

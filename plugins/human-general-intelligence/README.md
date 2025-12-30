@@ -16,6 +16,9 @@ Personal workflow toolkit with commands for planning, version control, session m
 ### Agent (1)
 - **`@readwise-highlight-ingester`** - Extract and organize highlights from Readwise Reader shared links
 
+### Skills (1)
+- **`tdd`** - Test-Driven Development methodology guide for writing tests first, following red-green-refactor cycle, and developing code with test-first approach
+
 ## Installation
 
 This plugin is distributed via the human-general-intelligence marketplace. See the marketplace README for installation instructions.
@@ -45,6 +48,18 @@ Use the Readwise agent to ingest highlights:
 ```
 
 Then provide a Readwise Reader shared link.
+
+### Skills
+
+Access TDD guidance by describing your intent:
+
+```
+Use TDD to implement user authentication
+Write tests first for the payment processing feature
+Follow red-green-refactor for the new API endpoint
+```
+
+The skill provides comprehensive guidance on test-first development.
 
 ## Google Calendar Integration (Optional)
 
@@ -83,7 +98,7 @@ Adjust in `/permissions` if needed for your workflow.
 |-----------|-------|-------------|
 | Commands | 7 | Daily planning, version control, productivity |
 | Agents | 1 | Readwise highlight ingestion |
-| Skills | 0 | Commands are self-contained |
+| Skills | 1 | TDD methodology guide |
 | Hooks | 0 | No event-driven automation |
 | MCP | 0 | Optional Google Calendar integration |
 | Settings | ✓ | Pre-configured permissions |
@@ -108,8 +123,11 @@ human-general-intelligence/
 │   ├── multi-perspective-review.md
 │   ├── today.md
 │   └── token-shortener.md
-└── agents/                        # Specialized agents
-    └── readwise-highlight-ingester.md
+├── agents/                        # Specialized agents
+│   └── readwise-highlight-ingester.md
+└── skills/                        # TDD methodology
+    └── tdd/
+        └── SKILL.md
 ```
 
 ## Usage Examples

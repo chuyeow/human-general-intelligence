@@ -9,7 +9,7 @@
     {
       "name": "human-general-intelligence",
       "description": "Stuff that I use to bridge the gaps before Artificial Super Intelligence arrives.",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "source": "./plugins/human-general-intelligence",
       "author": {
         "name": "Cheah Chu Yeow",
